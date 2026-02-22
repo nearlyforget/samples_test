@@ -1,0 +1,41 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    groups:
+      github-actions:
+        patterns: ["*"]
+    labels:
+      - "dependencies"
+
+  - package-ecosystem: "pip"
+    directory: "/a2a/business_agent"
+    schedule:
+      interval: "monthly"
+    groups:
+      python-dependencies:
+        patterns: ["*"]
+    labels:
+      - "dependencies"
+
+  - package-ecosystem: "npm"
+    directory: "/a2a/chat-client"
+    schedule:
+      interval: "monthly"
+    groups:
+      npm-dependencies:
+        patterns: ["*"]
+    labels:
+      - "dependencies"
+
+  - package-ecosystem: "npm"
+    directory: "/rest/nodejs"
+    schedule:
+      interval: "monthly"
+    groups:
+      npm-dependencies:
+        patterns: ["*"]
+    labels:
+      - "dependencies"
